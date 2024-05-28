@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Profile from "../../public/profile.jpeg";
 ---
 
 <Layout title="AlejandroAC">
@@ -9,7 +10,7 @@ import Card from "../components/Card.astro";
 		<div class="top">
 			<img
 				class="imagen"
-				src="../../public/profile.jpeg"
+				src={Profile.src}
 				alt="Profile photo"
 			/>
 			<div>
