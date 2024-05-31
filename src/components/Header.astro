@@ -8,7 +8,11 @@ import logo from '../../public/logo-black.png';
     <div class="first-part">
         <div><img src={logo.src} alt="imagen" /></div>
         <h1>AlejandroAC</h1>
-        <div>RRSS</div>
+        <div class="rrss">
+            <a href="https://www.linkedin.com/in/alejandro-alba-castillo-69583b186/" target="_blank" rel="noreferrer"><img src="../../public/linkedin.png" alt=""></a>
+            <a href="https://github.com/AlejandroAlbaCastillo" target="_blank" rel="noreferrer"><img src="../../public/github.png" alt=""></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFRWFQCdTCBZLpMCRRcmhRTKBmHvnxxTLQtLmrhBnBXQhgnGnWWPDCsBXxVVvdHDFjhxC" target="_blank" rel="noreferrer"><img src="../../public/correo.png" alt=""></a>
+        </div>
     </div>
     <nav class="navegator">
         <ul>
@@ -30,6 +34,14 @@ import logo from '../../public/logo-black.png';
         display: flex;
         flex-direction: column;
         gap: 0;
+        z-index: 5;
+    }
+    .rrss{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
     }
     .first-part {
         display: grid;
@@ -48,8 +60,11 @@ import logo from '../../public/logo-black.png';
     .first-part div img{ 
         width:100px;
     }
+    .first-part div a img{ 
+        width:2rem;
+    }
     .navegator{
-        background-color: #EEF7FF;
+        background-color: #7AB2B2;
         margin-top: 0;
        
     }
@@ -61,8 +76,11 @@ import logo from '../../public/logo-black.png';
     }
     .navegator ul li{
         list-style: none;
-        border-inline: black 1px solid;
+        border-left: black 2px solid;
         padding-inline: 10px;
+    }
+    .navegator ul li:last-child{
+        border-right: black 2px solid;
     }
     .navegator ul li a{
         text-decoration: none;

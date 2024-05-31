@@ -1,12 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import ProfileCard from "../components/ProfileCard.astro";
+import Carrousel from "../components/Carrousel.astro";
 import Card from "../components/Card.astro";
 import Profile from "../../public/profile.jpeg";
+
 ---
 
 <Layout title="AlejandroAC">
 	<main>
-		
+
+		<ProfileCard />
 		<div class="top">
 			<img
 				class="imagen"
@@ -49,10 +54,13 @@ import Profile from "../../public/profile.jpeg";
 		</p>
 
 
-		<!-- <h1 id="proyectos">Proyectos</h1>
+		<h1 id="proyectos">Proyectos</h1>
+
+		<Carrousel />
+
 		<h1 id="estudios">Estudios</h1>
 		
-		<h1 id="cv">CV</h1> -->
+		<h1 id="cv">CV</h1> 
 	</main>
 </Layout>
 
@@ -61,31 +69,17 @@ import Profile from "../../public/profile.jpeg";
 		margin: auto;
 		margin-top: 10rem;
 		padding: 1rem;
-		width: 800px;
+		width: 80%;
 		max-width: calc(100% - 2rem);
 		color: black;
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	.top{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 2rem;
-	}
-	.top div{
-		display: flex;
-		flex-direction: column;
-		justify-items: auto;
-	}
-	.top h2{
-		margin-bottom: 0 ;
-	}
-	.imagen {
-		border-radius: 50%;
-		width: 200px;
-	}
+	
+#sobremi, #proyectos, #estudios, #cv{
+	color: #4D869C;
+}
+
 	.astro-a {
 		position: absolute;
 		top: -32px;
