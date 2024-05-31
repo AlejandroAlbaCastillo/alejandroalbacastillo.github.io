@@ -1,12 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
 import ProfileCard from "../components/ProfileCard.astro";
 import Carrousel from "../components/Carrousel.astro";
+import Card from "../components/Card.astro";
+import Profile from "../../public/profile.jpeg";
+
 ---
 
 <Layout title="AlejandroAC">
 	<main>
+
 		<ProfileCard />
+		<div class="top">
+			<img
+				class="imagen"
+				src={Profile.src}
+				alt="Profile photo"
+			/>
+			<div>
+				<h2>Alejandro Alba Castillo</h2>
+				Programador Junior
+			</div>
+			
+		</div>
 		<h1 id="sobremi">Sobre mí</h1>
 		<p>
 			Soy un programador junior apasionado por el desarrollo de software y
