@@ -1,7 +1,8 @@
 ---
-
-
 import logo from '../../public/logo-black.png';
+import Linkedin from "../../public/linkedin.png";
+import GitHUb from "../../public/github.png";
+import Correo from "../../public/correo.png";
 ---
 
 <header role="banner" aria-label="Cabecera de sitio">
@@ -9,9 +10,9 @@ import logo from '../../public/logo-black.png';
         <div><img src={logo.src} alt="imagen" /></div>
         <h1>AlejandroAC</h1>
         <div class="rrss">
-            <a href="https://www.linkedin.com/in/alejandro-alba-castillo-69583b186/" target="_blank" rel="noreferrer"><img src="../../public/linkedin.png" alt=""></a>
-            <a href="https://github.com/AlejandroAlbaCastillo" target="_blank" rel="noreferrer"><img src="../../public/github.png" alt=""></a>
-            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFRWFQCdTCBZLpMCRRcmhRTKBmHvnxxTLQtLmrhBnBXQhgnGnWWPDCsBXxVVvdHDFjhxC" target="_blank" rel="noreferrer"><img src="../../public/correo.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/alejandro-alba-castillo-69583b186/" target="_blank" rel="noreferrer"><img src={Linkedin.src} alt=""></a>
+            <a href="https://github.com/AlejandroAlbaCastillo" target="_blank" rel="noreferrer"><img src={GitHUb.src}alt=""></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFRWFQCdTCBZLpMCRRcmhRTKBmHvnxxTLQtLmrhBnBXQhgnGnWWPDCsBXxVVvdHDFjhxC" target="_blank" rel="noreferrer"><img src={Correo.src} alt=""></a>
         </div>
     </div>
     <nav class="navegator">
@@ -44,11 +45,12 @@ import logo from '../../public/logo-black.png';
 
     }
     .first-part {
-        display: grid;
-        grid-template-rows: 80% 20%;
-        grid-template-columns: 30% 40% 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         background-color: #CDE8E5;
         margin-bottom: 0 ;
+        padding-inline: 3rem;
     }
     .first-part *{
         display: flex;
@@ -56,6 +58,15 @@ import logo from '../../public/logo-black.png';
         justify-content: center;
         align-items: center;
         
+    }
+    @media (max-width: 600px){
+        .first-part {
+        display: flex;
+        flex-direction: column;
+        background-color: #CDE8E5;
+        padding: 0;
+        justify-content: center;
+    }
     }
     .first-part div img{ 
         width:100px;
