@@ -10,34 +10,41 @@ import Metroid from "/public/Proyectos/pixelMetroid.png";
         <!-- Slides -->
         <div class="swiper-slide">
             <div class="contenido">
-                <img
-                    src={Metroid.src}
-                    alt="PXMetroid project"
-                />
+                <img src={Metroid.src} alt="PXMetroid project" />
                 <div class="content">
-                    <span>Pixel Metroid 2D</span><br>
+                    <span>Pixel Metroid 2D</span><br />
                     <span>
-                        <u>Descripción</u>: Juego de Unity basado en la saga de videojuegos Metroid
-                    </span><br>
+                        <u>Descripción</u>: Juego de Unity basado en la saga de
+                        videojuegos Metroid
+                    </span><br />
                     <span><u>Estado</u>: Terminado</span>
-                    <span><u>Repositorio</u>: <a href="https://github.com/AlejandroAlbaCastillo/PixelMetroid2D.git" target="_blank" rel="noreferrer">Aquí</a></span>
+                    <span
+                        ><u>Repositorio</u>: <a
+                            href="https://github.com/AlejandroAlbaCastillo/PixelMetroid2D.git"
+                            target="_blank"
+                            rel="noreferrer">Aquí</a
+                        ></span
+                    >
                 </div>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="contenido">
-                <img
-                    src={Sportify.src}
-                    alt="Sportify project"
-                />
+                <img src={Sportify.src} alt="Sportify project" />
                 <div class="content">
-                    <span>Sportify</span><br>
+                    <span>Sportify</span><br />
                     <span>
-                        <u>Descripción</u>: Aplicación de escritorio para reservar las pistas de un
-                        complejo deportivo
-                    </span><br>
+                        <u>Descripción</u>: Aplicación de escritorio para
+                        reservar las pistas de un complejo deportivo
+                    </span><br />
                     <span><u>Estado</u>: En desarrollo</span>
-                    <span><u>Repositorio</u>: <a href="https://github.com/AlejandroAlbaCastillo/TFGAlejandroAlbaCastillo/tree/dev" target="_blank" rel="noreferrer">Aquí</a></span>
+                    <span
+                        ><u>Repositorio</u>: <a
+                            href="https://github.com/AlejandroAlbaCastillo/TFGAlejandroAlbaCastillo/tree/dev"
+                            target="_blank"
+                            rel="noreferrer">Aquí</a
+                        ></span
+                    >
                 </div>
             </div>
         </div>
@@ -64,26 +71,26 @@ import Metroid from "/public/Proyectos/pixelMetroid.png";
         padding-inline: 3rem;
     } */
 
-    .swiper-slide{
+    .swiper-slide {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .contenido {
         display: flex;
         align-items: center;
         justify-content: start;
-        gap: 1rem;
-        width: 80%;
+        gap: 3rem;
+        width: 70%;
     }
-    .content{
+    .content {
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        gap: 0.5rem;
     }
-    .content span:first-child{
+    .content span:first-child {
         width: calc();
         border-bottom: 2px solid black;
         font-size: 25px;
@@ -92,6 +99,22 @@ import Metroid from "/public/Proyectos/pixelMetroid.png";
     .swiper img {
         height: 200px;
         border-radius: 50%;
+    }
+
+    @media (max-width: 1000px) {
+        .swiper {
+            width: 100%;
+            height: auto;
+            background-color: #cde8e5;
+            border-radius: 30px;
+            padding-block: 2rem ;
+        }
+        .contenido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
     }
 </style>
 

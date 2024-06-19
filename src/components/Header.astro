@@ -1,7 +1,12 @@
 ---
-
-
 import logo from '../../public/logo-black.png';
+import linkedin from '@public/linkedin.png';
+import github from '@public/github.png';
+import gmail from '@public/correo.png';
+import Image from 'astro/components/Image.astro';
+
+
+const images = await Astro.glob('/public/*.{png,jpeg}');
 ---
 
 <header role="banner" aria-label="Cabecera de sitio">
@@ -9,9 +14,9 @@ import logo from '../../public/logo-black.png';
         <div><img src={logo.src} alt="imagen" /></div>
         <h1>AlejandroAC</h1>
         <div class="rrss">
-            <a href="https://www.linkedin.com/in/alejandro-alba-castillo-69583b186/" target="_blank" rel="noreferrer"><img src="../../public/linkedin.png" alt=""></a>
-            <a href="https://github.com/AlejandroAlbaCastillo" target="_blank" rel="noreferrer"><img src="../../public/github.png" alt=""></a>
-            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFRWFQCdTCBZLpMCRRcmhRTKBmHvnxxTLQtLmrhBnBXQhgnGnWWPDCsBXxVVvdHDFjhxC" target="_blank" rel="noreferrer"><img src="../../public/correo.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/alejandro-alba-castillo-69583b186/" target="_blank" rel="noreferrer"><Image src={linkedin} alt='Linkedin'/></a>
+            <a href="https://github.com/AlejandroAlbaCastillo" target="_blank" rel="noreferrer"><Image src={github} alt='Git Hub'/></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFRWFQCdTCBZLpMCRRcmhRTKBmHvnxxTLQtLmrhBnBXQhgnGnWWPDCsBXxVVvdHDFjhxC" target="_blank" rel="noreferrer"><Image src={gmail} alt='Correo electrónico'/></a>
         </div>
     </div>
     <nav class="navegator">
@@ -41,14 +46,21 @@ import logo from '../../public/logo-black.png';
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
+        margin-right: 2rem;
 
     }
     .first-part {
-        display: grid;
-        grid-template-rows: 80% 20%;
-        grid-template-columns: 30% 40% 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         background-color: #CDE8E5;
         margin-bottom: 0 ;
+
+        /* display: grid;
+        grid-template-rows: 80% 20%;
+        grid-template-columns: 30% 40% 30%;
+         */
     }
     .first-part *{
         display: flex;
@@ -90,6 +102,20 @@ import logo from '../../public/logo-black.png';
         cursor: pointer;
         text-decoration: underline;
     }
-
+@media (max-width: 500px){
+    .first-part{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+    }
+    .rrss{
+        margin-right: 0;
+    }
+    .first-part h1{
+        display: none;
+    }
+}
 </style>
 <script></script>
